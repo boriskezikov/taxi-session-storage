@@ -16,8 +16,6 @@ public class AuthService {
     private final CredentialsStorage credentialsStorage;
 
     public UserPrincipal authenticate(String username) {
-        UserPrincipal userInfo = credentialsStorage.findByLogin(username).orElseThrow(MissingPrincipalException::new);
-        log.info("auth() - located user principal");
-        return userInfo;
+        return credentialsStorage.findByLogin(username).orElseThrow(MissingPrincipalException::new);
     }
 }

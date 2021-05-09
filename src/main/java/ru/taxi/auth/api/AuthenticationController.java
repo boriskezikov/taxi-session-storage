@@ -70,6 +70,7 @@ public class AuthenticationController {
                 usernamePasswordAuthenticationToken
                         .setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+                log.info("Authenticated: {}", usernamePasswordAuthenticationToken);
                 return usernamePasswordAuthenticationToken;
             }
         }
