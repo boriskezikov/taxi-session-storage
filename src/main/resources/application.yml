@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:8453/session_storage
+    username: session_storage
+    password: session_storage
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+  application:
+    name: auth-service
+
+server:
+  port: 8083
+
+jwt:
+  secret: omni1234
+
+
